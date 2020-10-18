@@ -99,26 +99,29 @@ void BFT(node *n) {
 }
 
 void Pre(node *n) {
-    if (n != NULL) {
-        std::cout << n->val << "  ";
-        Pre(n->left);
-        Pre(n->right);
+    if(n)
+    {
+        pre(n->left);
+        cout<<n->val<<" ";
+        pre(n->right);
     }
 }
 
 void In(node *n) {
-    if (n != NULL) {
+    if (n) 
+    {
         In(n->left);
-        std::cout << n->val << "  ";
+        cout <<n->val<< "  ";
         In(n->right);
     }
 }
 
-void Post(node *n) {
-    if (n != NULL) {
+void Post(node *n) 
+{
+    if (n) {
         Post(n->left);
         Post(n->right);
-        std::cout << n->val << "  ";
+        cout <<n->val<< "  ";
     }
 }
 
